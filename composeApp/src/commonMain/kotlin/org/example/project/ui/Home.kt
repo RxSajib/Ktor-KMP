@@ -55,11 +55,9 @@ fun SuccessFully(data: List<PostResponseItem>?) {
     Box(modifier = Modifier.fillMaxSize()){
         LazyColumn {
             items(data?.size ?: 0){ index ->
-               /* data?.let { data ->
+                data?.let { data ->
                     Item(data[index])
-                }*/
-                FoodItem()
-
+                }
             }
         }
     }
