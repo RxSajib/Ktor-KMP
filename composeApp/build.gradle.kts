@@ -80,6 +80,10 @@ kotlin {
             implementation("io.ktor:ktor-serialization-kotlinx-json:3.0.2")
             implementation("org.jetbrains.androidx.lifecycle:lifecycle-viewmodel-compose:2.8.2")
 
+            implementation("io.coil-kt.coil3:coil-compose:3.0.4")
+            implementation("io.coil-kt.coil3:coil-compose-core:3.0.4")
+            implementation("io.coil-kt.coil3:coil-network-ktor3:3.0.0")
+            implementation("io.coil-kt.coil3:coil:3.0.0")
         }
 
         iosMain.dependencies {

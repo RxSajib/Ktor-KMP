@@ -11,6 +11,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.intl.Locale
 import androidx.lifecycle.viewmodel.compose.viewModel
+import org.example.project.component.FoodItem
 import org.example.project.component.Item
 import org.example.project.data.model.post.PostResponseItem
 import org.example.project.utils.NetworkResult
@@ -54,9 +55,10 @@ fun SuccessFully(data: List<PostResponseItem>?) {
     Box(modifier = Modifier.fillMaxSize()){
         LazyColumn {
             items(data?.size ?: 0){ index ->
-                data?.let { data ->
+               /* data?.let { data ->
                     Item(data[index])
-                }
+                }*/
+                FoodItem()
 
             }
         }
