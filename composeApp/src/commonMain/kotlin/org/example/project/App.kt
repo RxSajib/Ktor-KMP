@@ -16,11 +16,12 @@ import org.jetbrains.compose.ui.tooling.preview.Preview
 import ktorkmm.composeapp.generated.resources.Res
 import ktorkmm.composeapp.generated.resources.compose_multiplatform
 import org.example.project.ui.Home
+import org.example.project.ui.MyMeal
 
 @Composable
 @Preview
 fun App() {
     MaterialTheme {
-        Home()
+        MyMeal()
     }
 }

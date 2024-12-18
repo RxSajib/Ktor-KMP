@@ -27,27 +27,31 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
 import ktorkmm.composeapp.generated.resources.Res
+import ktorkmm.composeapp.generated.resources.placeholder
 import ktorkmm.composeapp.generated.resources.sajib
+import org.example.project.data.model.meal.Meal
+import org.example.project.data.model.post.PostResponseItem
 import org.jetbrains.compose.resources.painterResource
 
 @Composable
-fun FoodItem(modifier: Modifier = Modifier) {
+fun FoodItem(meal : Meal) {
 
 
 
     Box(modifier = Modifier.fillMaxWidth().padding(10.dp)) {
         Row(modifier = Modifier.fillMaxWidth() .height(IntrinsicSize.Min) ) {
             AsyncImage(
-                model = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwHJ_2dgv6JdsBEdVV5SOPEw2BvXVf6Ne4vA&s",
+                model = meal.strMealThumb,
                 contentDescription = null,
                 modifier = Modifier.width(100.dp).aspectRatio(1f).clip(RoundedCornerShape(8.dp)),
                 contentScale = ContentScale.Crop,
-                error = painterResource(Res.drawable.sajib)
+                error = painterResource(Res.drawable.sajib),
+                placeholder = painterResource(Res.drawable.placeholder)
             )
 
             Spacer(modifier = Modifier.width(10.dp))
             Column(modifier = Modifier.fillMaxSize(), verticalArrangement = Arrangement.Center) {
-                Text("Baked salmon with fennel & tomatoes", style = TextStyle(color = Color.Black.copy(0.5f), fontWeight = FontWeight.SemiBold))
+                Text(meal.strMeal, style = TextStyle(color = Color.Black.copy(0.5f), fontWeight = FontWeight.SemiBold))
 
                 Spacer(modifier = Modifier.height(10.dp))
                 Button(onClick = {}){
